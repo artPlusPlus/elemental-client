@@ -25,6 +25,6 @@ test:
 
 about:
   home: https://github.com/artplusplus/elemental-client.
-  summary: elemental-backend provides a data backend for elemental cms.
+  summary: elemental-client provides an interface to an elemental-backend.
   license: Mozilla Public License 2.0 (MPL 2.0)
   license_file: LICENSE
