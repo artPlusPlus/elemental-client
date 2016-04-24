@@ -1,0 +1,30 @@
+package:
+  name: elemental-client
+  version: "0.1.0dev0"
+
+source:
+  path: ../
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - elemental-core
+    - elemental-kinds
+  run:
+    - python
+    - requests
+    - elemental-core
+    - elemental-kinds
+
+test:
+  requires:
+    - pytest
+  imports:
+    - elemental_client
+
+about:
+  home: https://github.com/artplusplus/elemental-client.
+  summary: elemental-backend provides a data backend for elemental cms.
+  license: Mozilla Public License 2.0 (MPL 2.0)
+  license_file: LICENSE
