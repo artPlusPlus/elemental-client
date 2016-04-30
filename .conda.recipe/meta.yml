@@ -1,6 +1,6 @@
 package:
   name: elemental-client
-  version: "0.1.0dev0"
+  version: "0.2.dev0"
 
 source:
   path: ../

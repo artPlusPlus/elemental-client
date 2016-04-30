@@ -1,7 +1,8 @@
 import logging
+import uuid
 
 from ._resource import Resource
-from ._remote_value import RemoteValue
+from .._remote_value import RemoteValue
 
 
 _LOG = logging.getLogger(__name__)

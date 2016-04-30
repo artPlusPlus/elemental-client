@@ -1,8 +1,8 @@
 import logging
 
 from ._resource import Resource
-from ._remote_value import RemoteValue
-from ._util import (
+from .._remote_value import RemoteValue
+from .._util import (
     process_inbound_resource_list_data,
     process_outbound_resource_list_data
 )
@@ -12,7 +12,7 @@ _LOG = logging.getLogger(__name__)
 
 
 class ContentInstance(Resource):
-    attributes = RemoteValue('attribute_ids')
+    attributes = RemoteValue('attribute_ids', default=[])
 
     @attributes.on_get
     def attributes(self, attribute_data):
