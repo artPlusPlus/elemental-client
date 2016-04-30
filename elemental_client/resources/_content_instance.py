@@ -16,7 +16,8 @@ class ContentInstance(Resource):
 
     @attributes.on_get
     def attributes(self, attribute_data):
-        return process_inbound_resource_list_data(self._client, attribute_data)
+        return process_inbound_resource_list_data(self._connection,
+                                                  attribute_data)
 
     @attributes.on_set
     def attributes(self, attribute_data):

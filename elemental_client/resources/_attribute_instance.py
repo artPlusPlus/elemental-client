@@ -1,5 +1,4 @@
 import logging
-import uuid
 
 from ._resource import Resource
 from .._remote_value import RemoteValue
@@ -13,7 +12,7 @@ class AttributeInstance(Resource):
 
     @attribute_type.on_get
     def attribute_type(self, type_id):
-        return self._client.get_resource(type_id)
+        return self._connection.get_resource(type_id)
 
     @attribute_type.on_set
     def attribute_type(self, value):
@@ -62,7 +61,7 @@ class AttributeInstance(Resource):
 
     @source.on_get
     def source(self, source_id):
-        return self._client.get_resource(source_id)
+        return self._connection.get_resource(source_id)
 
     @source.on_set
     def source(self, source):

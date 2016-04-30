@@ -16,7 +16,7 @@ class ContentType(Resource):
 
     @base_types.on_get
     def base_types(self, base_ids):
-        return process_inbound_resource_list_data(self._client, base_ids)
+        return process_inbound_resource_list_data(self._connection, base_ids)
 
     @base_types.on_set
     def base_types(self, base_types_data):
@@ -26,7 +26,8 @@ class ContentType(Resource):
 
     @attribute_types.on_get
     def attribute_types(self, attribute_type_ids):
-        return process_inbound_resource_list_data(self._client, attribute_type_ids)
+        return process_inbound_resource_list_data(self._connection,
+                                                  attribute_type_ids)
 
     @attribute_types.on_set
     def attribute_types(self, attribute_types_data):
